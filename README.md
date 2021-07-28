@@ -1,4 +1,5 @@
 # CIFAR - 10
+![intro](https://github.com/savss624/Readme-Images/blob/main/CIFAR%20-%2010/intro.jpeg)
 
 ## Understanding the Data
 The CIFAR-10 (Canadian Institute For Advanced Research) dataset consists of 60000 images each of 32x32x3 color images having ten classes, with 6000 images per category.
@@ -27,6 +28,13 @@ Now, plot the CIFAR-10 images.
 ## Feature Reduction Using Principal Component Analysis (PCA)
 Now comes the most exciting part. We will see how PCA turn high-dimensional data into a low-dimensional principal components.
 
+### But, Why use PCA ?
+PCA is applied on images for a number of reasons. They are:
+* **Number of features:** Images have huge number of features. Even a small image of 28 x 28 pixels will have 784 features to deal with.
+* **Lot of Covariance:** When you look at an image, it is easy to understand that if we have the values for one pixel 'p', the pixels in the vicinity of 'p' will generally have similar values.
+* Other fundamental reasons to apply PCA are that it **reduces memory consumption** and **Speed Up** the training models, reducing time taken.
+
+### Apply PCA
 But before that, let's reshape the image dimensions from three to one (flatten the images).
 
 ![reshaping](https://github.com/savss624/Readme-Images/blob/main/CIFAR%20-%2010/data%20flattening.png)
@@ -56,3 +64,21 @@ Next Step is to fit the same model to test data and transform it.
 
 ## Apply Classification Models
 
+Models that we're using :
+* ***Logistic Regression***
+* ***Random Forest***
+* ***Gaussian NaiveBayes***
+* ***K Nearest Neighbor***
+* ***Support Vector Machines***
+
+Let's fit all models on the training data with all algoritms and get the accuracy for the testing data.
+
+| Algorithms | Accuracy Score  |
+| :-----: | :-: |
+| ***Logistic Regression*** | 0.4081 |
+| ***Random Forest*** | 0.441 |
+| ***Gaussian NaiveBayes*** | 0.3147 |
+| ***K Nearest Neighbor*** | 0.2279 |
+| ***Support Vector Machines*** | 0.5518 |
+
+Looks like, we're achieving the maximum score with SVM ( i.e. 0.5518 ). Still its not a good score and. But, the best that can be achieved right now! 
